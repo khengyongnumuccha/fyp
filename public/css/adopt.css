@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F9E6DD;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* .logo {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+} */
+
+.logo a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i{
+    margin-left: 60px;
+    font-size: 30px;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* content  */
+.content .intro{
+    display: flex;
+    width: 100%;
+    background-color: #F9E6DD;
+    height: 550px;
+    overflow: hidden;
+}
+
+.image{
+    width: 30%;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+    margin-top: -43px; 
+}
+
+.adopt{
+    width: 70%;
+    padding-top: 40px;
+    padding-left: 70px;
+}
+
+.adopt h1{
+    font-size: 70px;
+}
+
+.adopt p{
+    font-size: 30px;
+}
+
+/* Search bar container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 25px;
+    background: #fff;
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+/* Input field */
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    /* color: #666; */
+    border-radius: 25px; 
+}
+
+/* Placeholder styling */
+.search-input::placeholder {
+    color: #000;
+    /* font-style: italic; */
+}
+
+/* Search button */
+.search-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 18px;
+   
+}
+
+.search-btn:hover {
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .search-container {
+        max-width: 300px;
+    }
+
+    .search-input {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .search-btn {
+        padding: 8px 10px;
+    }
+}
+
+
+/* profile */
+
+.pet{
+    background-color: #f8f8f8;
+    padding: 50px 0px;
+}
+.search{
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+
+.search h1{
+    padding-left: 70px;
+}
+
+.search .search-container{
+    margin-right: 20px;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profiles{
+    padding: 30px 70px;
+    overflow: hidden;
+}
+
+.profiles .image{
+    padding-top: 30px;
+    width: 450px;
+    height: 600px;
+}
+
+.profiles img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.profiles .details{
+    text-align: center;
+}
+
+.profiles .details p{
+    font-size: 20px;
+}
+
+
+.profiles .details button{
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 1px solid #b0a7a7;
+    background-color: #F9E6DD;
+    margin-top: 10px;
+}
+
+.profiles .details button:hover{
+    padding: 10px 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #cdbaba;
+    border:1px solid  #F9E6DD;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #eee;
+}
+
+/* tips */
+
+.lines{
+    background-color: #F9E6DD;
+    padding: 50px 70px;
+}
+.lines h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.points{
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.pets{
+    width: 45%;
+}
+
+.pets img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.tips{
+    width: 50%;
+    font-size: 20px;
+}
+
+.tips ul{
+    list-style-type: none;
+}
+
+.tips li{
+    margin-bottom: 40px;
+}
+
+.tips i{
+    margin-right: 10px;
+    color: #cdbaba;
+}
+
+/* guide */
+
+.guide{
+    background-color: #f8f8f8;
+    padding: 30px 70px 50px;
+}
+
+.guide h1{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.process{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+.process .guideline img{
+    width: 80px;
+    margin-left: 70px;
+}
+
+.process .guideline p{
+    font-size: 25px;
+}
+
+
+
+/* footer */
+.footer {
+    background-color: #cdbaba;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000;
+    margin-left: 80px;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.footer-logo p {
+    margin: 5px 0 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.footer-contact h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 800;
+}
+
+.footer-social p {
+    margin: 0 5px;
+    font-size: 25px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.footer-social i{
+    margin-right: 10px;
+}
+
+.footer-social .fb i {
+    color: #007bff;
+}
+
+.footer-social .fb:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.footer-social .insta i {
+    color: orangered;
+}
+
+.footer-social .insta:hover {
+    color: orangered;
+    cursor: pointer;
+}
+
+
+
+
+
+
+

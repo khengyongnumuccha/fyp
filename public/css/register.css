@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Quicksand, sans-serif;
+    background-image: url('../image/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 30px;
+}
+
+.data {
+    width: 100%;
+}
+
+.data .name {
+    text-align: center;
+    color: hsl(172, 62%, 53%);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.data span {
+    color: black;
+}
+
+.data i {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    color: #ecd2b9;
+    margin-bottom: 10px;
+}
+
+.data label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ecd2b9;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type=submit] {
+    background-color: hsl(172, 62%, 53%);
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+input[type=submit]:hover {
+    background-color: hsl(172, 52%, 45%);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: hsl(172, 62%, 53%);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.image {
+    width: 50%;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}

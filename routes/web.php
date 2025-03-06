@@ -1,15 +1,34 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+//pages
+Route::get('/aboutus', [UserController::class, 'aboutus'])->name('aboutus');
+Route::get('/adoptform', [UserController::class, 'adoptform'])->name('adoptform');
+Route::get('/adopt', [UserController::class, 'adopt'])->name('adopt');
+Route::get('/contact', [UserController::class, 'contact'])->name('contact');
+Route::get('/donate', [UserController::class, 'donate'])->name('donate');
+Route::get('/profileinfo', [UserController::class, 'profileinfo'])->name('profileinfo');
+Route::get('/donateform', [UserController::class, 'donateform'])->name('donateform');
+
+
+
+//normal user
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified','user'])->name('dashboard');
+
+//admin user
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+})->middleware(['auth', 'verified','admin'])->name('admin.dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

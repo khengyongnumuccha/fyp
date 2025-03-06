@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F9E6DD;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* .logo {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+} */
+
+.logo a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i{
+    margin-left: 60px;
+    font-size: 30px;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Swiper slider */
+.content{
+    background-color: #f8f8f8;
+    padding: 30px 70px 50px;
+}
+
+.count {
+    display: flex;
+    min-height: 600px;
+    background-image: url('../image/back.png');
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    background-size: cover;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.swiper {
+    width: 45%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+   
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white !important;
+    background: #000;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.count .desc {
+    width: 50%; /* Adjusted for better space distribution */
+    padding: 20px;
+}
+
+.count .desc .name h1{
+    font-weight: 900;
+    padding-bottom: 10px;
+    font-size: 50px;
+    color: #575556;
+}
+
+
+.count .desc .name p{
+    display: inline-flex;
+    margin-right: 60px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #b0a4ac;
+}
+
+.count .desc .detail p{
+    font-size: 20px;
+    text-align: justify;
+    padding-top: 10px;
+    color: #534f4f;
+}
+
+.count .desc .button{
+    padding-top: 20px;
+}
+
+.count .desc .button button{
+    padding: 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    background-color: #e59ecb;
+    font-weight: bold;
+}
+
+.count .desc .button button:hover{
+    background-color: #b0a4ac;
+}
+
+
+.count .desc .button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.about h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #575556;
+}
+
+.about .facts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.facts .thing{
+    font-size: 20px;
+    color: #534f4f;
+    font-weight: 800;
+}
+
+.facts .thing i{
+    margin-right: 10px;
+    color: #e59ecb;
+    font-size: 25px;
+}
+
+.about .story{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.about .do{
+    display: flex;
+}
+
+.about .do .take {
+   margin-right: 30px;
+}
+
+.about .do .take button{
+    width: 170px;
+    background-color: #e59ecb;
+    border: none;
+    border-radius: 30px;
+    height: 70px;
+    font-size: 20px;
+}
+
+.about .do .take a{
+    text-decoration: none;
+    color: white;
+}
+
+.about .do .give button{
+    width: 170px;
+    background-color: #e59ecb;
+    border: none;
+    border-radius: 30px;
+    height: 70px;
+    font-size: 20px;
+}
+
+.about .do .give a{
+    text-decoration: none;
+    color: white;
+}
+
+.about .do button{
+    cursor: pointer; 
+    font-weight: bold;  
+}
+
+.about .do button:hover{
+    background-color: #b0a4ac;
+}
+
+.about .reach{
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.about .reach a{
+    color: #e59ecb;
+    font-weight: 900;
+}
+
+
+/* footer */
+.footer {
+    background-color: #cdbaba;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000;
+    margin-left: 80px;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.footer-logo p {
+    margin: 5px 0 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.footer-contact h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 800;
+}
+
+.footer-social p {
+    margin: 0 5px;
+    font-size: 25px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.footer-social i{
+    margin-right: 10px;
+}
+
+.footer-social .fb i {
+    color: #007bff;
+}
+
+.footer-social .fb:hover {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.footer-social .insta i {
+    color: orangered;
+}
+
+.footer-social .insta:hover {
+    color: orangered;
+    cursor: pointer;
+}
