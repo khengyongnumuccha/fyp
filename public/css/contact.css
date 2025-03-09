@@ -200,6 +200,11 @@ font-size: 30px;
    
 }
 
+.container .text h1{
+    text-align: center;
+    padding: 10px;
+}
+
 .form-group {
     margin-bottom: 15px;
 }

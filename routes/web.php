@@ -3,16 +3,20 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Handle contact form submission
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 //pages
 Route::get('/aboutus', [UserController::class, 'aboutus'])->name('aboutus');
 Route::get('/adoptform', [UserController::class, 'adoptform'])->name('adoptform');
 Route::get('/adopt', [UserController::class, 'adopt'])->name('adopt');
+// Show the contact form
 Route::get('/contact', [UserController::class, 'contact'])->name('contact');
 Route::get('/donate', [UserController::class, 'donate'])->name('donate');
 Route::get('/profileinfo', [UserController::class, 'profileinfo'])->name('profileinfo');

@@ -67,31 +67,39 @@
 
             <div class="data">
                 <div class="container">
-                    <form action="">
+                    <form action="{{ route('contact.send') }}" method="POST">
+                        @csrf
+                        <div class="text">
+                            <h1>Contact Form</h1>
+                        </div>
                         <div class="form-group">
                             <label for="first-name">First Name </label>
-                            <input type="text" id="first-name" required>
-
+                            <input type="text" id="first-name" name="first_name" required>
                         </div>
                         <div class="form-group">
                             <label for="last-name">Last Name </label>
-                            <input type="text" id="last-name" required>
+                            <input type="text" id="last-name" name="last_name" required>
                         </div>
                         <div class="form-group">
                             <label for="address">Address </label>
-                            <input type="text" id="address" required>
+                            <input type="text" id="address" name="address" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email </label>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="sub">Subject </label>
-                            <input type="text" id="sub" required>
+                            <input type="text" id="sub" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message </label>
+                            <textarea id="message" name="message" required></textarea>
                         </div>
                         <button type="submit" class="btn">Submit Form</button>
-
                     </form>
+
+
                 </div>
             </div>
 

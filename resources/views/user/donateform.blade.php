@@ -58,16 +58,16 @@
                     </div>
                     <div class="form-group">
                         <label for="qsn">Any confusion and questions? Ask below.</label>
-                        <input type="text" id="qsn" required>
+                        <input type="text" id="qsn" >
                     </div>
                     <button type="submit" class="btn">Submit Form</button>
 
                 </form>
             </div>
             <div class="scanner">
-                <div class="img1">
+                <!-- <div class="img1">
                     <img src="image/cat&dog.png" alt="">
-                </div>
+                </div> -->
 
                 <div class="img2">
                     <p>Scan below QR & Donate via Khalti app</p>

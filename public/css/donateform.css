@@ -123,10 +123,10 @@ body {
 
 .scanner{
     padding-right: 70px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .scanner .img2{
